@@ -4,7 +4,7 @@
 
 ---
 
-## 🛠️ Current Tech Stack (Week 1)
+## 🛠️ Current Tech Stack (Day 1)
 
 * **Backend Framework:** Python, Flask, Flask-RESTful 
 * **External Integration:** OpenAlex REST API (`requests`, connection timeouts, error handling)
@@ -12,23 +12,11 @@
 
 ---
 
-## 🚀 Current Implementation (Week 1 Complete)
+## 🚀 Current Implementation (day 1 Complete)
 
 * **Research Paper Search API:** Implemented a RESTful endpoint (`GET /api/v1/papers?q={query}`) that queries the OpenAlex database.
 * **Upstream Error Handling:** Integrated exception handling for connection timeouts, failed API requests, and malformed upstream responses.
 * **Metadata Normalization:** Automatically extracts and structures raw payload attributes—including paper titles, citation counts (`cited_by_count`), publication years, and author arrays—into a clean, standardized JSON format.
-
----
-
-## 🗺️ Execution Roadmap
-
-- [x] **Week 1: Research Ingestion API** — OpenAlex integration, parameter handling, data normalization.
-- [ ] **Week 2: Persistence & Local Library** — PostgreSQL integration, SQLAlchemy ORM models, and upsert caching logic.
-- [ ] **Week 3: ML Recommendation Engine** — TF-IDF vectorization and cosine similarity algorithm for related paper discovery.
-- [ ] **Week 4: React Web Client** — Interactive UI featuring real-time search, filters, and paper detail views.
-- [ ] **Week 5: Production & VPS Deployment** — Automated unit tests, Gunicorn WSGI, Nginx reverse proxy, and SSL setup.
-
----
 
 ## ⚙️ Getting Started
 
