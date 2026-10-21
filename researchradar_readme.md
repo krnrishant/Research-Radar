@@ -6,7 +6,7 @@
 
 ## 🛠️ Current Tech Stack (Week 1)
 
-* **Backend Framework:** Python, Flask, Flask-RESTful
+* **Backend Framework:** Python, Flask, Flask-RESTful 
 * **External Integration:** OpenAlex REST API (`requests`, connection timeouts, error handling)
 * **Data Processing:** JSON normalization & schema transformation
 
