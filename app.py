@@ -8,7 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 db = SQLAlchemy()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:rishantkarn@localhost:5432/ResearchRadar'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://<your-user>:<your-password>@localhost:5432/ResearchRadar'
 api = Api(app)
 db.init_app(app)
 
