@@ -13,7 +13,6 @@ api = Api(app)
 db.init_app(app)
 
 class PaperModel(db.Model):
-    # __table__ = 'PaperModel'
     id: Mapped[int] = mapped_column(primary_key = True)
     openalex_id: Mapped[str] = mapped_column(String(100), unique = True, nullable = False)
     title: Mapped[str] = mapped_column(Text, nullable =False)
