@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 import requests
 from requests.exceptions import RequestException
+import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Integer, String, Text, JSON
 from sqlalchemy.orm import Mapped, mapped_column
@@ -9,7 +10,12 @@ from sqlalchemy.dialects.postgresql import insert as pg_insert
 
 db = SQLAlchemy()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:rishantkarn@localhost:5432/ResearchRadar'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:rishantkarn@localhost:5432/ResearchRadar'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+
+if not app.config['SQLALCHEMY_DATABASE_URI']:
+    raise RuntimeError("DATABASE_URL environment variable is not set")
+
 api = Api(app)
 db.init_app(app)
 
@@ -130,4 +136,4 @@ with app.app_context():
     db.create_all()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
